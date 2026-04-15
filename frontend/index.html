@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>APP - Cashback</title>
+</head>
+<body>
+    <section>
+        <h1>Cashback 💸</h1>
+
+        
+        <div class="list-inputs">
+            <div class="label-input">
+                <label for="valor">Valor do Produto:</label>
+                <input type="number" id="valor" placeholder="Digite o Valor." >
+            </div>
+            <div class="label-input">
+                <label for="desconto">Desconto (%):</label>
+                <input type="number" id="desconto" placeholder="Digite o Desconto."  >
+            </div>
+            <div class="label-input">
+                <label for="Cliente">Tipo de Cliente:</label>
+                <input list="opcoes" id="Cliente" name="opcao" placeholder="Selecione.">
+                    <datalist id="opcoes" >
+                        <option value="COMUM">
+                        <option value="VIP">
+                     </datalist>
+                    </div>
+
+        </div>
+        <div class="btn-resultado">
+            <button onclick="calcularCashback()">Calcular Cashback</button>
+            <output id="Resultado" placeholder="Resultado"></output>
+           
+
+        </div>
+        
+        <div id="historico">
+            <h3>Histórico de Cálculos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Valor</th>
+                        <th>Desconto</th>
+                        <th>Cashback</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-historico">
+                </tbody>
+            </table>
+        </div>
+     </section>
+</body>
+</html>
